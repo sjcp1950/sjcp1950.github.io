@@ -1,0 +1,26 @@
+footer {
+	background-color: var(--footer-background-color);
+	color: var(--color-reverse);
+	padding: 1ex;
+	padding-left: var(--width-padding);
+	padding-right: var(--width-padding);
+} footer> span,
+footer> span> span {
+	display: inline-block;
+	text-align: left;
+} footer> span:first-child {
+	float: left;
+} footer> span:first-child> span {
+	float: left;
+	margin-right: 2ex;
+} footer> span:last-child {
+	float: right;
+} footer> span:last-child> span {
+	float: left;
+	margin-left: 2ex;
+} footer> span> span {
+	margin-top: .25ex;
+	margin-bottom: .25ex;
+} footer a {
+	color: var(--color-rev);
+}
