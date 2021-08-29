@@ -1,0 +1,26 @@
+* {
+	margin: 0;
+	padding: 0;
+
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+
+	word-break: break-all;
+	word-wrap: break-word;
+} html, body {
+	min-height: 100vh;
+	overflow-x: hidden;
+} body {
+	display: flex;
+	flex-direction: column;
+} a {
+	color: var(--color);
+	text-decoration: none;
+} a:not(.header):hover {
+	text-decoration: underline;
+} section {
+	flex: 1;
+	padding-left: var(--width-padding);
+	padding-right: var(--width-padding);
+}

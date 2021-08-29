@@ -1,0 +1,8 @@
+header {
+	background-color: var(--header-background-color);
+	padding: .5ex;
+	padding-left: var(--width-padding);
+	padding-right: var(--width-padding);
+	text-align: center;
+	font-size: 1.25em;
+}
