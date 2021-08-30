@@ -21,4 +21,6 @@
 	flex: 1;
 	padding-left: var(--width-padding);
 	padding-right: var(--width-padding);
+} img {
+	cursor: pointer;
 }

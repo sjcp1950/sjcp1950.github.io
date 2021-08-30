@@ -1,3 +1,5 @@
 $(document).ready(function() {
-	$("body").children().wrapAll("<section></section>");
+	$("img").click(function() {
+		location.href = $(this).attr("src");
+	});
 });

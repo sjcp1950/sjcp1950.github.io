@@ -1,3 +1,4 @@
+var url = location.href;
 var pathname = location.pathname;
 
 

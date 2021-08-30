@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	$("body").children().wrapAll("<section></section>");
 
 // header
 	$("section").before("<header><a href='/' class='header'>세진냉동</a></header>");
