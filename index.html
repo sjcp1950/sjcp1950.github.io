@@ -6,22 +6,36 @@
 	<meta name="viewport" content="width=device-width, initial=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
 	<link rel="stylesheet" type="text/css" href="/css/variable.css"/>
 	<link rel="stylesheet" type="text/css" href="/css/index.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/header.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/footer.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/template.css"/>
+	<style>
+section div {
+	display: table;
+	width: 100%;
+} section p {
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 1.25em;
+	text-align: center;
+}
+	</style>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="/js/variable.js"></script>
 	<script type="text/javascript" src="/js/index.js"></script>
-	<script type="text/javascript" src="/js/header.js"></script>
-	<script type="text/javascript" src="/js/footer.js"></script>
-	<script type="text/javascript" src="/js/kakaomap.js"></script>
+	<script type="text/javascript" src="/js/template.js"></script>
+	<script type="text/javascript">
+$(document).ready(function() {
+	$("section").find("div").css("height", $("section").height());
+});
+	</script>
 </head>
 <body>
 <section>
 
 
 
-<span map="세진냉동">카카오맵</span>
-
-
+<div>
+	<p>세진냉동<br/>sjcp1950@naver.com</p>
+</div>
 
 </section>
 </body>
