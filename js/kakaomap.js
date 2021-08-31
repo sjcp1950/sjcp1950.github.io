@@ -1,7 +1,6 @@
 document.write("<script charset='UTF-8' class='daum_roughmap_loader_script' src='https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js'></script>"); // Kakaomap Install Script
 
 $(document).ready(function() {
-
 	var width = $("[kakaomap=세진냉동]").parent().width();
 	var height = $("[kakaomap=세진냉동]").parent().height();
 	if ( width < height ) {
