@@ -26,3 +26,15 @@
 		--width-padding: calc((100% - var(--width)) / 2);
 	}
 }
+
+
+
+@media (orientation: portrait) {
+	:root {
+		--width-img: 100%;
+	}
+} @media (orientation: landscape) {
+	:root {
+		--width-img: calc(100% / 2);
+	}
+}
