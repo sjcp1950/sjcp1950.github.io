@@ -19,10 +19,20 @@
 	text-decoration: none;
 } section {
 	flex: 1;
+	padding-top: 1em;
+	padding-bottom: 1em;
 	padding-left: var(--width-padding);
 	padding-right: var(--width-padding);
 } img {
+	position: relative;
+	top: .25ex;
 	cursor: pointer;
-	border: 1px solid var(--color);
-	max-width: var(--width-img);
+} ul {
+	list-style: none;
+} section ul> li {
+	background-image: url("/media/ul_list.svg");
+	background-repeat: no-repeat;
+	background-position: 0ex .5ex;
+	background-size: 1ex;
+	padding-left: 1.5ex;
 }

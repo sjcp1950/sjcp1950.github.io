@@ -3,10 +3,12 @@
 header {
 	background-color: var(--header-background-color);
 	text-align: center;
-	font-size: 1.25em;
+	font-size: 1.5em;
+} header img {
+	margin-right: .5ex;
 } header a {
 	display: block;
-	line-height: 2em;
+	line-height: 1.5em;
 	padding: .5ex;
 	padding-left: 1ex;
 	padding-right: 1ex;
@@ -29,9 +31,8 @@ nav {
 	display: flex;
 	flex-direction: row;
 	line-height: 2em;
-} nav>ul> li {
+} nav> ul> li {
 	flex: 1;
-	list-style: none;
 	display: inline-block;
 }
 
@@ -66,4 +67,4 @@ footer> span> span {
 	color: var(--color-rev);
 } footer a:hover {
 	text-decoration: underline;
-} 
+}

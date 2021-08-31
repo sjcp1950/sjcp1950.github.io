@@ -31,10 +31,10 @@
 
 @media (orientation: portrait) {
 	:root {
-		--width-img: 100%;
+		--max-width-img: 100%;
 	}
 } @media (orientation: landscape) {
 	:root {
-		--width-img: calc(100% / 2);
+		--max-width-img: calc(100% / 2);
 	}
 }
