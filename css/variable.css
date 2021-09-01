@@ -7,7 +7,7 @@
 
 	--header-background-color: #ffffff;
 	--navigator-background-color: #87ceeb; /* skyblue */
-	--navigator-background-hover: #65accb;
+	--navigator-background-hover: #65acc9; /* skyblue - #222222 */
 	--footer-background-color: #444444;
 }
 
@@ -23,18 +23,14 @@
 } @media screen and (min-width: 1100px) {
 	:root {
 		--width: 1100px;
-		--width-padding: calc((100% - var(--width)) / 2);
+		--width-padding: calc((100vw - var(--width)) / 2);
 	}
 }
 
 
 
 @media (orientation: portrait) {
-	:root {
-		--max-width-img: 100%;
-	}
+	/* 세로모드 */
 } @media (orientation: landscape) {
-	:root {
-		--max-width-img: calc(100% / 2);
-	}
+	/* 가로모드 */
 }
