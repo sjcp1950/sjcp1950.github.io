@@ -9,23 +9,16 @@
 	<link rel="stylesheet" type="text/css" href="/css/index.css"/>
 	<link rel="stylesheet" type="text/css" href="/css/template.css"/>
 	<style>
-section div {
+section> div {
 	display: table;
 	width: 100%;
-} section p {
-	display: table-cell;
-	vertical-align: middle;
-	font-size: 1.25em;
-	text-align: center;
-} img:not(.header) {
-	display: block;
-	margin: auto;
-	margin-top: 1em;
-	max-width: var(--max-width-img);
 } section ul {
 	display: table;
 	margin: auto;
 	font-size: 1.25em;
+	margin-bottom: 1em;
+} section .slide {
+	margin: auto;
 }
 	</style>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -34,7 +27,7 @@ section div {
 	<script type="text/javascript" src="/js/template.js"></script>
 	<script type="text/javascript">
 $(document).ready(function() {
-	$("section").find("div").css("height", $("section").height());
+	$("section").children("div").css("height", $("section").height());
 });
 	</script>
 </head>
@@ -42,7 +35,10 @@ $(document).ready(function() {
 
 
 
+
+
 <div>
+
 <ul>
 	<li>농수산물 냉동저온 창고</li>
 	<li>오픈 쇼케이스</li>
@@ -50,7 +46,14 @@ $(document).ready(function() {
 	<li>칠러 냉각기</li>
 	<li>모든중고 알선 및 이전설치</li>
 </ul>
+<div class="slide" style="width: 50ex; height: 30ex">
+	<img src="/media/card-front.jpeg"/>
+	<img src="/media/card-back.jpeg"/>
 </div>
+
+</div>
+
+
 
 
 

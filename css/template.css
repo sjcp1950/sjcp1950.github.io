@@ -2,10 +2,14 @@
 
 header {
 	background-color: var(--header-background-color);
+	padding-left: var(--width-padding);
+	padding-right: var(--width-padding);
 	text-align: center;
 	font-size: 1.5em;
 } header img {
 	margin-right: .5ex;
+	position: relative;
+	top: .25ex;
 } header a {
 	display: block;
 	line-height: 1.5em;
@@ -27,6 +31,7 @@ nav {
 	display: block;
 } nav a:hover {
 	background-color:  var(--navigator-background-hover);
+	text-decoration: none;
 } nav> ul {
 	display: flex;
 	flex-direction: row;
@@ -42,29 +47,20 @@ nav {
 
 footer {
 	background-color: var(--footer-background-color);
-	color: var(--color-reverse);
 	padding: 1ex;
 	padding-left: var(--width-padding);
 	padding-right: var(--width-padding);
-} footer> span,
-footer> span> span {
+	text-align: center;
+} footer, footer a {
+	color: var(--color-reverse);
+} footer a:hover {
+	text-decoration: none;
+} footer> span {
 	display: inline-block;
-	text-align: left;
-} footer> span:first-child {
-	float: left;
-} footer> span:first-child> span {
-	float: left;
-	margin-right: 2ex;
-} footer> span:last-child {
-	float: right;
-} footer> span:last-child> span {
-	float: left;
-	margin-left: 2ex;
 } footer> span> span {
+	display: inline-block;
+	margin-left: 1ex;
+	margin-right: 1ex;
 	margin-top: .25ex;
 	margin-bottom: .25ex;
-} footer a {
-	color: var(--color-rev);
-} footer a:hover {
-	text-decoration: underline;
 }
