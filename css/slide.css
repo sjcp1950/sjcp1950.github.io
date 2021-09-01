@@ -9,12 +9,14 @@
 	position: relative;
 	display: inline-block;
 	transition: all .5s;
+	top: -1px;
 } .slide .sliding {
 	position: absolute;
 	padding-left: 1px;
-} .slide .sliding> * {
+} .slide .sliding_in {
 	display: block;
 	margin: auto;
+	text-align: center;
 } .slide div.slide_btn {
 	position: absolute;
 	width: 100%;

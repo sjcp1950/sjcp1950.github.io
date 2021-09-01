@@ -30,7 +30,7 @@ $(document).ready(function() {
 		$(slide).find("span.slide_btn").click(function() {
 			clearTimeout(slice_loop);
 			var nth = $(this).index() + 1;
-			$(slide).find(".slide_list").css("margin-left", offset+10 - offset*nth - 10*nth);
+			$(slide).find(".slide_list").css("margin-left", offset+10 - offset*nth - 10*nth - 2);
 			$(this).parent().children().css("background-color", "");
 			$(this).css("background-color", "var(--border-color)");
 
