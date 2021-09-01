@@ -6,6 +6,12 @@ $(document).ready(function() {
 	});
 
 	$(".slide").each(function(slide_i, slide) {
+		if ( $(slide).parent().width() < $(slide).width() ) {
+			var scal = $(slide).parent().width()/$(slide).width();
+			$(slide).css("width", $(slide).css("width").slice(0, -2) * scal );
+			$(slide).css("height", $(slide).css("height").slice(0, -2) * scal );
+		}
+
 		var slide_cnt = $(slide).children().length;
 
 		$(slide).children().attr("class", "sliding_in");
@@ -30,9 +36,9 @@ $(document).ready(function() {
 		$(slide).find("span.slide_btn").click(function() {
 			clearTimeout(slice_loop);
 			var nth = $(this).index() + 1;
+			$(slide).find(".slide_list").css("margin-left", offset+10 - offset*nth - 10*nth);
 			$(this).parent().children().css("background-color", "");
 			$(this).css("background-color", "var(--border-color)");
-			$(slide).find(".slide_list").css("margin-left", offset+10 - offset*nth - 10*nth);
 
 			if ( $(this).next().length == 1 ) {
 				var slide_click = $(this).next();
