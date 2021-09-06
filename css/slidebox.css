@@ -1,0 +1,28 @@
+.slidebox {
+	position: relative;
+	display: block;
+	border: 1px solid var(--border-color);
+	width: 100%;
+	overflow: hidden;
+} .slidebox .sliding {
+	position: relative;
+	display: inline-block;
+	transition: all .5s;
+} .slidebox .slide_list {
+	position: absolute;
+} .slidebox .slide {
+	display: block;
+	margin: auto;
+	text-align: center;
+} .slidebox div.slide_btn {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+} .slidebox span.slide_btn {
+	border: 1px solid black;
+	border-radius: 1ex;
+	display: inline-block;
+	width: 2ex;
+	height: 2ex;
+	cursor: pointer;
+}
