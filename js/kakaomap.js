@@ -2,15 +2,13 @@ document.write("<script charset='UTF-8' class='daum_roughmap_loader_script' src=
 
 $(document).ready(function() {
 	$("[kakaomap]").each(function(map_i, map) {
-		if ( $(map).parent().width() < $(map).width() ) {
-			var scal = $(map).parent().width()/$(map).width();
-			$(map).css("width", $(map).css("width").slice(0, -2) * scal );
-			$(map).css("height", $(map).css("height").slice(0, -2) * scal );
-		}
+		var scal = $(map).attr("scal");
+		var scal_output = box_scal( $(map) , scal );
+		$(map).css("height", scal_output);
 		$(map).css("display", "");
 
 		var mapWidth = $(map).width();
-		var mapHeight = $(map).height();
+		var mapHeight = $(map).height() - 32;
 
 		if ( $(map).attr("kakaomap") == "세진냉동" ) {
 			// Kakaomap Node
@@ -26,12 +24,11 @@ $(document).ready(function() {
 						"'mapHeight' : '" + mapHeight + "',"+
 					"}).render();"+
 				"</script>");
-			$(map).css("margin", "auto");
 		}
-		$(map).append("<div>" + $("[map_for='" + $(map).attr("kakaomap") + "']").html() + "</div>");
-		$("[map_for='" + $(map).attr("kakaomap") + "']").remove();
-		$(map).next().css("width", $(map).width());
-		$(map).next().css("margin", "auto");
-		$(map).next().css("margin-top", "5ex");
+
+		$(window).resize(function() {
+			$(map).find("#daumRoughmapContainer1630216012970").css("width", $(map).width());
+			$(map).find("#daumRoughmapContainer1630216012970").children(".wrap_map").css("height", $(map).hidth());
+		});
 	});
 })

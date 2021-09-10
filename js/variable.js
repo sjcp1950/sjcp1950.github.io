@@ -25,6 +25,7 @@ if (	device.match(/iPhone|iPod|iPad|Android|Windows CE|Windows CE;|BlackBerry|Sy
 
 
 // to px
+
 function to_px(size, target) {
 	var get = parseFloat(size, 10);
 	var html_size = parseFloat($("html").css("font-size"), 10);
@@ -40,4 +41,25 @@ function to_px(size, target) {
 	}
 
 	return size;
+}
+
+
+
+// scal
+
+function box_scal(target, scal) {
+	var output = "";
+	if ( scal && scal.indexOf(":") != -1 ) {
+		var scal_x = scal.split(":")[0];
+		var scal_y = scal.split(":")[1];
+//		$(target).css("height", $(target).outerWidth() / scal_x * scal_y);
+		output = $(target).outerWidth() / scal_x * scal_y;
+	} else {
+		if ( $(target).height() == 0 ) {
+//			$(target).css("height", "100%");
+			output = "100%";
+		}
+	}
+
+	return output;
 }

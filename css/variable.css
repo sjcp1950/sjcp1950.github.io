@@ -4,8 +4,11 @@
 	--border-color: #777777;
 	--border-color-reverse: #888888;
 
+	--sjcp-color: #87ceeb; /* skyblue */
+	--sjcp-color-reverse: #783114;
+
 	--header-background-color: #ffffff;
-	--navigator-background-color: #87ceeb; /* skyblue */
+	--navigator-background-color: var(--sjcp-color);
 	--navigator-background-hover: #65acc9; /* skyblue - #222222 */
 	--footer-background-color: #444444;
 
@@ -14,6 +17,10 @@
 	--header-height: 3rem;
 	--navigator-height: 2rem;
 	--footer-height: 3rem;
+
+	--header-index: 100;
+	--navigator-index: 90;
+	--footer-index: 80;
 }
 
 

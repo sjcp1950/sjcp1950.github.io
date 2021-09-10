@@ -23,12 +23,30 @@
 	text-decoration: underline;
 } ul> li {
 	list-style: none;
-} .main ul> li {
+} .main ul> li:before {
+	content: "";
+	display: inline-block;
 	background-image: url("/media/ul_list.svg");
 	background-repeat: no-repeat;
-	background-position: 0ex .5ex;
-	background-size: 1ex;
-	padding-left: 1.5ex;
+	background-position: .25em .25em;
+	background-size: .5em;
+	width: 1em;
+	height: 1em;
+} .table {
+	width: 100%;
+	overflow: auto;
+} table {
+	min-width: 100%;
+	border-collapse: collapse;
+	white-space: nowrap;
+} table caption {
+	background-color: black;
+	color: white;
+} table th {
+	background-color: var(--sjcp-color);
+	text-align: center;
+} table caption, table th, table td {
+	padding: .5em;
 }
 
 
@@ -70,7 +88,7 @@ header {
 	width: 100%;
 	text-align: center;
 	font-size: 1.5em;
-	z-index: 100;
+	z-index: var(--header-index);
 } header a.header {
 	width: 100%;
 	line-height: calc(var(--header-height) - 2px);
@@ -94,7 +112,7 @@ nav {
 	padding: 0 var(--width-padding);
 	width: 100%;
 	text-align: center;
-	z-index: 90;
+	z-index: var(--navigator-index);;
 } nav ul {
 	display: table;
 	table-layout: fixed;

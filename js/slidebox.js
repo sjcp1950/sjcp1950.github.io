@@ -1,13 +1,5 @@
 function slidebox_height(slidebox, scal) {
-	if ( scal.indexOf(":") != -1 ) {
-		var scal_x = scal.split(":")[0];
-		var scal_y = scal.split(":")[1];
-		$(slidebox).css("height", $(slidebox).outerWidth() / scal_x * scal_y);
-	} else {
-		if ( $(slidebox).height() == 0 ) {
-			$(slidebox).css("height", "100%");
-		}
-	}
+	$(slidebox).css("height", box_scal( $(slidebox) , scal ));
 }
 
 function slide_height(slidebox) {
@@ -19,13 +11,9 @@ function slide_height(slidebox) {
 $(document).ready(function() {
 	$(".slidebox").each(function(slidebox_i, slidebox) {
 		$(slidebox).children().css("display", "none");
-		var scal = "";
-		if ( $(slidebox).is("[scal]") ) {
-			scal = $(slidebox).attr("scal");
-			slidebox_height( $(slidebox) , scal );
-		} else {
-			slidebox_height( $(slidebox) , scal );
-		}
+
+		var scal = $(slidebox).attr("scal");
+		slidebox_height( $(slidebox) , scal );
 
 		$(slidebox).children().addClass("slide");
 		$(slidebox).children().wrap("<div class='slide_list'></div>");
