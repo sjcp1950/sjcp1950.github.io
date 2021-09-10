@@ -90,6 +90,7 @@ header {
 	font-size: 1.5em;
 	z-index: var(--header-index);
 } header a.header {
+	display: block;
 	width: 100%;
 	line-height: calc(var(--header-height) - 2px);
 } header a.header img {
@@ -160,7 +161,7 @@ nav.hide {
 	text-align: left;
 } header.nav ~ .main {
 	padding-top: calc(var(--header-height) + 1em);
-} header.nav> .header {
+} header.nav a.header {
 	display: inline-block;
 	width: auto;
 	padding: 0 .5em;
