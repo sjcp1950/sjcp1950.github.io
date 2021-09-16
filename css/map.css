@@ -1,0 +1,10 @@
+[map], [map] ~ div {
+	display: block;
+	margin: auto;
+	width: 98%;
+} @media screen and (min-width: 786px) {
+	[map], [map] ~ div {
+	}
+} [map] ~ div {
+	margin-top: 1em;
+}

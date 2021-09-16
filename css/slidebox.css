@@ -1,0 +1,40 @@
+.slidebox {
+	position: relative;
+	border: 1px solid var(--border-color);
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+} .slidebox> .sliding {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	transition: all .5s;
+} .sliding> .slide {
+	position: absolute;
+} .slide:not(img) {
+	height: 100%;
+	width: 100%;
+} img.slide {
+	display: block;
+	border: var(--border-color);
+} .slide[min] {
+	min-height: 100%;
+	min-width: 100%;
+} .slide[max] {
+	max-height: 100%;
+	max-width: 100%;
+} div.slide_btn {
+	display: flex;
+	justify-content: space-evenly;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+} span.slide_btn {
+	position: relative;
+	border: 1px solid var(--border-color);
+	border-radius: .75rem;
+	height: 1.5rem;
+	width: 1.5rem;
+	cursor: pointer;
+	bottom: .5rem;
+}

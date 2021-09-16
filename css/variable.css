@@ -1,0 +1,43 @@
+:root {
+	--color: #000;
+	--color-reverse: #fff;
+	--sjcp-color: #87ceeb; /* skyblue */
+	--border-color: #777777;
+	--border-color-reverse: #888888;
+
+	--header-height: 3rem;
+	--navigator-height: 2rem;
+	--footer-height: 3rem;
+
+	--header-background-color: #fff;
+	--navigator-background-color: var(--sjcp-color);
+	--navigator-background-hover: #65acc9; /* skyblue - #222222 */
+	--footer-background-color: #444;
+
+	--header-index: 100;
+	--navigator-index: 90;
+	--footer-index: 80;
+}
+
+
+
+:root {
+	--width: 100%;
+	--width-padding: 0;
+} @media screen and (min-width: 768px) {
+	:root {
+	}
+} @media screen and (min-width: 1200px) {
+	:root {
+		--width: 1080px;
+		--width-padding: calc((100% - var(--width)) / 2);
+	}
+}
+
+
+
+@media (orientation: portrait) {
+	/* 세로모드 */
+} @media (orientation: landscape) {
+	/* 가로모드 */
+}

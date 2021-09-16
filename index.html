@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>세진냉동</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+	<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="/css/variable.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/index.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/slidebox.css"/>
+	<style>
+header {
+	padding: 0;
+} .slidebox {
+	border-left: 0;
+	border-right: 0;
+}
+
+#main_root {
+	height: 400px;
+} @media screen and (min-width: 768px) {
+	#main_root {
+		height: 550px;
+	}
+}
+
+
+/* remove */
+.slidebox {
+	text-align: center;
+	font-size: 1.25em;
+}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="/js/variable.js"></script>
+	<script type="text/javascript" src="/js/index.js"></script>
+	<script type="text/javascript" src="/js/slidebox.js"></script>
+	<script type="text/javascript" class="slidebox_swipe">
+$(document).ready(function() {
+	var x1 = "";
+	var x2 = "";
+	$(".slidebox").on("touchstart", function(start) {
+		x1 = event.touches[0].pageX;
+	});
+	$(".slidebox").on("touchend", function(end) {
+		x2 = end.changedTouches[0].pageX;
+
+		var view_index = Math.abs( parseFloat($(".slidebox").find(".sliding").css("left"), 10) / $(window).innerWidth() ) + 1;
+		if ( x1+10 < x2 ) {
+			if ( view_index == 1 ) {
+				view_index = $(".slidebox").find(".slide").length;
+			} else {
+				view_index = view_index - 1;
+			}
+		} else if ( x1-10 > x2 ) {
+			if ( view_index == $(".slidebox").find(".slide").length ) {
+				view_index = 1;
+			} else {
+				view_index = view_index + 1;
+			}
+		} else {
+			view_index = "";
+		}
+
+		if ( view_index ) {
+			$(".slidebox").find("span.slide_btn:nth-child(" + view_index + ")").trigger("click");
+		}
+	});
+});
+	</script>
+</head>
+<body>
+
+
+
+<div class="slidebox">
+	<div style="background-color: pink">Image 1</div>
+	<div style="background-color: yellowgreen">Image 2</div>
+	<div style="background-color: skyblue">Image 3</div>
+</div>
+
+
+
+</body>
+</html>
